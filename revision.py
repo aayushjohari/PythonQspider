@@ -1,0 +1,11 @@
+d=  {"a": 1, "b":2, "c":3, "True":1, ("hello ,"):[1,2,3]}
+print(d.keys())
+print(d.values())
+print(d.pop('a'))
+print(d.items())
+print(d.get('b'))
+print(d.popitem())
+d.update({"d":4})
+print(d)
+d.clear()
+print(d)
