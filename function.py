@@ -43,7 +43,7 @@ print(palindrome())
 
 
 # to check whether the number is strong or not 
-
+'''
 def strong():
     n = int(input("enter the number: "))
     original = n
@@ -58,9 +58,62 @@ def strong():
 
         sum+=fact
         n=n//10
-        
+
     if sum == original :
         return "strong"
     return "not strong"
 
 print(strong())
+'''
+
+## function with argument and with return keyword
+
+# to add_2 number
+'''
+def add(a,b):
+    return a+b
+print(add(3,4))
+'''
+
+# to check whether the number is strong or not without while loop
+'''
+def strong(num):
+
+    original  =  num
+
+    sum  = 0
+
+    for i in str(num):
+        # i = int(i)
+        fact = 1
+        for j in range(1 , int(i)+1):
+            fact = fact*j
+        sum = sum + fact
+    if sum == original:
+        return "strong"
+    return "not strong"
+
+num = int(input("enter the number: "))
+print(strong(num))
+'''
+
+# find the strong number between the given range
+
+def strong(num):
+
+    original  =  num
+
+    sum  = 0
+
+    for i in str(num):
+        # i = int(i)
+        fact = 1
+        for j in range(1 , int(i)+1):
+            fact = fact*j
+        sum = sum + fact
+
+    return sum  == original
+
+for i in range(1, 1000001):
+    if strong(i):
+        print(i)
