@@ -98,7 +98,7 @@ print(strong(num))
 '''
 
 # find the strong number between the given range
-
+'''
 def strong(num):
 
     original  =  num
@@ -117,3 +117,45 @@ def strong(num):
 for i in range(1, 1000001):
     if strong(i):
         print(i)
+'''
+
+# find the second largest element in the list
+
+def second_largest():
+
+    l = eval(input("enter the list: "))
+
+    if len(l) <=1:
+        return None
+    
+    larg = l[0]
+
+    slarg = None
+
+    for i in l:
+        if i > larg:
+            slarg = larg
+            larg = i
+
+        elif i != larg:
+            if slarg == None or slarg < i :
+                slarg = i
+
+    return slarg
+
+print(second_largest())
+
+    
+# to find the third largest number
+
+def third_largest():
+
+    l = eval(input("enter the list: "))
+
+    larg = l[0]
+
+    slarg = None
+
+    tlarg = None
+
+    
