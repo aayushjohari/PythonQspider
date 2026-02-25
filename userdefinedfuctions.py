@@ -96,17 +96,19 @@ def demo():
 
 data = demo()
 print(data)
+
+'''
 '''
 def mul_10(n):
     return n*10
 # print(mul_10(10))
-
+'''
 
 # li = ['hi' , 2.33 , 3 , 'python',8,5,6-4j]
 # out =30,50,80
 
 #print the integers my multiplying 10 from given list
-
+'''
 def filter_int(list1):
 
     for i in list1 :
@@ -114,3 +116,88 @@ def filter_int(list1):
             print(mul_10(i))
 
 filter_int([1,2,3,'python','java'])
+'''
+
+# create a function which pop first value from the list 
+'''
+def remove_first(list1):
+
+    value = list1.pop(0)
+    print(value)
+l = [1,2,3,"hy","bye"]
+remove_first(l)
+print(l)
+
+def removefirst_withoutpop(list1):
+    first_value = list1[0]
+    list1.remove(first_value)
+    return first_value
+
+l1 = ["bye",2,3,"hi"]
+print(removefirst_withoutpop(l1))
+print(l1)
+'''
+# find the function which return the length of the collection
+'''
+def count_length(list1):
+    count  =0 
+    for i in list1:
+        count+=1
+    return count
+
+# l1 = [1,2,3,4,5]
+print(count_length("hello"))
+print(count_length({10 , 'hello' , (1,2,3) , (10,20,30)}))
+'''
+# create a functuon to count the digits of a given number
+# with while loop
+'''
+def count_digits(n):
+    n = abs(n)
+    if n == 0:
+        return 1
+    
+    count  = 0
+    while n != 0:
+        count +=1
+        n=n//10
+    return count
+
+num  = int(input("enter the number: "))
+print(count_digits(num))
+'''
+
+# with for loop
+'''
+def count_digits(n):
+    num  = abs(n)
+    count = 0
+    for i in str(num):
+        count+=1
+    return count
+
+print(count_digits(000))
+'''
+
+# count the floating values of the given number
+
+def count_float(n):
+    num =str(n).split('.')
+    return len(num[-1])
+    # x = num[1]
+    # # count = 0
+    # # for i in x:
+    # #     count+=1
+    # # return count
+n = float(input("enter the number: "))
+print(count_float(n))
+        
+
+
+
+
+# n = 5.45
+# num = str(n)
+# x =num.split('.')
+# print()
+# print(x[1])
