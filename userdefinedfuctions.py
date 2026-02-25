@@ -1,0 +1,116 @@
+# create alist of 5 values using the input from the user
+'''
+def list_of_five(n): #parameter / fromal argument
+    list1 =[]
+    for i in range(n):
+        data  = eval(input("enter the data: "))
+        list1.append(data)
+    
+    print(list1) 
+list_of_five(3) #value / actual argument
+'''
+
+## Positional argument vs keyword argument  vs default argument
+'''
+def person_info(name , age , email):
+    print(f"Name is {name}")
+    print(f"Age is {age}")
+    print(f"Email is {email}")
+
+person_info("Python" , 18 , "abc@gmail.com")
+
+def person_info(name , age , email):
+    print(f"Name is {name}")
+    print(f"Age is {age}")
+    print(f"Email is {email}")
+
+person_info(name = "Python" , age = 18 , email = "abc@gmail.com")
+
+def person_info(name , age , email ="NA"):
+    print(f"Name is {name}")
+    print(f"Age is {age}")
+    print(f"Email is {email}")
+
+person_info(name = "Python" ,age =18 ,)
+'''
+
+## variable length argument vs variable lemgth keyword argument
+'''
+def collect_students(*args):
+    print(args)
+
+collect_students("AAYUSH" ,"PYTHON")
+collect_students()
+
+def get_sum(*args):
+    sum(args)
+
+get_sum(100,200,200,300)
+
+def collect_students(**kwargs):
+    print(kwargs)
+
+collect_students(name = "AAYUSH" , sub ="PYTHON")
+collect_students()
+'''
+
+# create a function which can extract all the palindrome number from a list
+'''
+def filter_palindrome(list1):
+    out= []
+    for i in list1:
+        if type(i) == int and str(i)[::-1] == str(i):
+                out.append(i)
+    print(out)
+filter_palindrome([45,22,3,"level"])
+'''
+
+# create a function which gives the factorial of a number 
+'''
+def factorial(num):
+     fact = 1
+     for i in range(1, num+1):
+          fact = fact*i
+     print(fact)
+
+factorial(5)
+'''
+#fucntion with return keyword
+'''
+l1 = [10,20,'hi' , 'java']
+
+value = l1.pop(-2) # return the value
+print("romoved value --" , value)
+print(l1)
+'''
+'''
+l1 = [10,20,'hi' , 'java']
+
+value = l1.remove('java') # does not return the value
+print("romoved value --" , value)
+print(l1)
+'''
+'''
+def demo():
+    return 10
+
+data = demo()
+print(data)
+'''
+def mul_10(n):
+    return n*10
+# print(mul_10(10))
+
+
+# li = ['hi' , 2.33 , 3 , 'python',8,5,6-4j]
+# out =30,50,80
+
+#print the integers my multiplying 10 from given list
+
+def filter_int(list1):
+
+    for i in list1 :
+        if type(i) == int:
+            print(mul_10(i))
+
+filter_int([1,2,3,'python','java'])
