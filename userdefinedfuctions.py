@@ -180,7 +180,7 @@ print(count_digits(000))
 '''
 
 # count the floating values of the given number
-
+'''
 def count_float(n):
     num =str(n).split('.')
     return len(num[-1])
@@ -192,12 +192,86 @@ def count_float(n):
 n = float(input("enter the number: "))
 print(count_float(n))
         
+'''
 
+# create a function returns bolean value
+'''
+def is_odd(val):
+    if val %2 != 0:
+        return True
+    return False
 
+n = int(input("enter the number: "))
+print(is_odd(n))
+'''
 
+'''
+def is_even(val):
+    
+    if n %2 == 0:
+        return True
+    return False
 
-# n = 5.45
-# num = str(n)
-# x =num.split('.')
-# print()
-# print(x[1])
+n = int(input("enter the number: "))
+print(is_even(n))
+'''
+ 
+'''
+def is_palindrome(val):
+    if val[::1] == val[::-1]:
+        return True
+    return False
+
+n = input("enter the value: ")
+print(is_palindrome(n))
+'''
+
+'''
+def is_prime(val):
+    
+    for i in range(2 , int(val**0.5)+1):
+        if val%i == 0:
+            return False
+    return True
+
+val = int(input("enter the value : "))
+print(is_prime(val))
+'''
+'''
+def is_armstorng(val):
+
+    num = val
+    total= 0
+    power = len(str(num))
+    while num > 0:
+        ld   = num%10
+        total  += ld ** power
+        num  = num//10
+    
+    if total == val:
+        return True
+    return False
+
+val = int(input("enter the number: "))
+print(is_armstorng(val))
+'''
+'''
+def is_spy(val):
+    if val  < 0:
+        return False
+    
+    total  = 0
+    product = 1
+    while val > 0:
+        ld  = val%10
+        total  +=ld
+        product *=ld
+        val = val//10
+    if total  == product:
+        return True
+    return False
+
+val = int(input("enter the number: "))
+print(is_spy(val))
+'''
+# create a function to extract 
