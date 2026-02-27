@@ -180,19 +180,19 @@ print(count_digits(000))
 '''
 
 # count the floating values of the given number
-'''
-def count_float(n):
-    num =str(n).split('.')
-    return len(num[-1])
+
+# def count_float(n):
+#     num =str(n).split('.')
+#     return len(num[-1])
     # x = num[1]
     # # count = 0
     # # for i in x:
     # #     count+=1
     # # return count
-n = float(input("enter the number: "))
-print(count_float(n))
+# n = float(input("enter the number: "))
+# print(count_float(n))
         
-'''
+
 
 # create a function returns bolean value
 '''
@@ -218,26 +218,27 @@ print(is_even(n))
  
 '''
 def is_palindrome(val):
-    if val[::1] == val[::-1]:
+    if str(val) == str(val)[::-1]:
         return True
     return False
 
-n = input("enter the value: ")
-print(is_palindrome(n))
+# n = input("enter the value: ")
+# print(is_palindrome(n))
 '''
 
-'''
+
 def is_prime(val):
-    
+    if val <= 1:
+        return False
     for i in range(2 , int(val**0.5)+1):
         if val%i == 0:
             return False
     return True
 
-val = int(input("enter the value : "))
-print(is_prime(val))
-'''
-'''
+# val = int(input("enter the value : "))
+# print(is_prime(val))
+
+
 def is_armstorng(val):
 
     num = val
@@ -252,9 +253,9 @@ def is_armstorng(val):
         return True
     return False
 
-val = int(input("enter the number: "))
-print(is_armstorng(val))
-'''
+# val = int(input("enter the number: "))
+# print(is_armstorng(val))
+
 '''
 def is_spy(val):
     if val  < 0:
@@ -274,4 +275,121 @@ def is_spy(val):
 val = int(input("enter the number: "))
 print(is_spy(val))
 '''
-# create a function to extract 
+# create a function to extract all the vowels from a given string , it should return list
+'''
+def extract_vowels(string):
+    out =[]
+    for i in string:
+        if i in "AEIOUaeiou":
+            out.append(i)
+    print(out)
+string = input("enter the string: ")
+extract_vowels(string)
+'''
+'''
+def extract_consonants(string):
+    out =[]
+    for i in string:
+        if i not in "AEIOUaeiou":
+            out.append(i)
+    print(out)
+string = input("enter the string: ")
+extract_consonants(string)
+'''
+'''
+def filter_digits(string):
+    for i in string: 
+        if i.isdigit():
+            print(i)
+string = input("enter the string: ")
+filter_digits(string)
+'''
+'''
+def filter_zeros(string):
+    result =""
+    for i in string:
+        if i !="0":
+            result +=i
+    return result
+
+string = input("enter the string: ")
+print(filter_zeros(string))
+'''
+
+# def floating_count(n):
+#     count  = 0
+#     while n!= int(n):
+#         count +=1
+#         n *=10
+#     return count
+
+# print(floating_count(1.23445))
+
+# extract all the float values having only two flaoting values
+
+'''
+li = [2.32,10,5,5.231,98,32,42,3.141]
+
+def extract_floating(li):
+    for i in li:
+        if type(i) == float and count_float(i) ==2:
+            print(i)
+
+extract_floating(li)
+'''
+
+#wap to print all the palindrome number in a  given range
+'''
+n = int(input("enter the number: "))
+def palindrome_series():
+    for i in range(1,n+1):
+        if is_palindrome((i)):
+            print(i , end=" ")
+
+palindrome_series()
+'''
+
+# filter all the plaindrome numbers from a given list
+'''
+def filter_palindrome(list1):
+    for i in list1:
+        if is_palindrome(i):
+            print(i , end= " ")
+
+l1 = eval(input("enter the list: "))
+filter_palindrome(l1)
+'''
+
+# primeno. series
+'''
+def prime_no_series(n):
+    for i in range(1, n):
+        if is_prime(i):
+            print(i , end=" ")
+n = int(input("enter the number: "))
+prime_no_series(n)
+'''
+'''
+def armstrong_series(n):
+    for i in range(1, n+1):
+        if is_armstorng(i):
+            print(i , end=" ")
+
+n = int(input("enter the number: "))
+armstrong_series(n)
+'''
+
+# nth prime number
+
+def nth_prime_no(n):
+    count  = 0
+    num  =1
+    while count  < n :
+        num+=1
+        if is_prime(num):
+            count+=1
+
+    return num
+
+n = int(input("enter the n : "))
+print(nth_prime_no(n))
